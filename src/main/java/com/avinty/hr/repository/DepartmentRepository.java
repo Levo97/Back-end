@@ -9,7 +9,8 @@ import java.util.List;
 
 @Repository
 public interface DepartmentRepository extends JpaRepository<Department, Integer> {
-    @Query(value = "select * From departments where name like %?1%", nativeQuery=true)
-    List<Department> searchDepartment(String name);
+
+    @Query(value = "select name From departments where lower(name) like lower(concat('%', ?1,'%'))", nativeQuery=true)
+    List<String> searchDepartment(String name);
 
 }

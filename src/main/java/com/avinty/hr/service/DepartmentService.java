@@ -6,10 +6,10 @@ import java.util.List;
 
 public interface DepartmentService {
 
-    void deleteDepartment(int id);
+    void deleteDepartment(Integer id);
 
 
-    List<Department> searchDepartment(String name);
+    List<String> searchDepartment(String name);
 
     List<Department> getAllDepartment();
 }

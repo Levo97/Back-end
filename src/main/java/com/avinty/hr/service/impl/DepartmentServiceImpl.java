@@ -1,6 +1,7 @@
 package com.avinty.hr.service.impl;
 
 import com.avinty.hr.entity.Department;
+import com.avinty.hr.entity.Employee;
 import com.avinty.hr.repository.DepartmentRepository;
 import com.avinty.hr.service.DepartmentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,12 +18,12 @@ public class DepartmentServiceImpl implements DepartmentService {
 
     @Override
     @Transactional
-    public void deleteDepartment(int id) {
+    public void deleteDepartment(Integer id) {
         departmentRepository.deleteById(id);
     }
 
     @Override
-    public List<Department> searchDepartment(String name) {
+    public List<String> searchDepartment(String name) {
         return departmentRepository.searchDepartment(name);
     }
 

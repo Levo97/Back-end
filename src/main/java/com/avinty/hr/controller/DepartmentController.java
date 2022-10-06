@@ -22,8 +22,8 @@ public class DepartmentController {
     }
 
 
-   @GetMapping("/department")
-    public ResponseEntity<List<Department>> searchDepartment(@RequestParam("name") String name){
+    @GetMapping("/department")
+    public ResponseEntity<List<String>> searchDepartment(@RequestParam("name") String name){
         return ResponseEntity.ok().body((departmentService.searchDepartment(name)));
     }
     @GetMapping("/dep-emp")

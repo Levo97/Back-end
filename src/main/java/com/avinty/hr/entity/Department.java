@@ -1,5 +1,6 @@
 package com.avinty.hr.entity;
 
+import com.fasterxml.jackson.annotation.JsonIdentityReference;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,7 +10,6 @@ import org.hibernate.annotations.DynamicInsert;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.List;
 
 @DynamicInsert
 @Data
@@ -46,8 +46,6 @@ public class Department {
     @JoinColumn(name = "updated_by", referencedColumnName = "id")
     private Employee updated_by;
 
-    @OneToMany
-    @JoinColumn(name = "employees", referencedColumnName = "id")
-    private List<Employee> employees;
+
 
 }

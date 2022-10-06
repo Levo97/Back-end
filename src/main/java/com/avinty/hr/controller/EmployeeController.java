@@ -1,5 +1,6 @@
 package com.avinty.hr.controller;
 
+import com.avinty.hr.entity.Department;
 import com.avinty.hr.entity.Employee;
 import com.avinty.hr.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
