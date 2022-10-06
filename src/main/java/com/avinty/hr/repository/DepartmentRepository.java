@@ -8,7 +8,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface DepartmentRepository extends JpaRepository<Department, Long> {
-    @Query(value = "select * From departments where name = ?1", nativeQuery=true)
+public interface DepartmentRepository extends JpaRepository<Department, Integer> {
+    @Query(value = "select * From departments where name like %?1%", nativeQuery=true)
     List<Department> searchDepartment(String name);
+
 }

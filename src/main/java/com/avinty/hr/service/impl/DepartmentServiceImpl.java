@@ -17,7 +17,7 @@ public class DepartmentServiceImpl implements DepartmentService {
 
     @Override
     @Transactional
-    public void deleteDepartment(Long id) {
+    public void deleteDepartment(int id) {
         departmentRepository.deleteById(id);
     }
 

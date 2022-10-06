@@ -23,30 +23,31 @@ public class Department {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", updatable = false, nullable = false)
-    private Long  department_id;
+    private int  department_id;
 
     @Column(name = "name", nullable = false, columnDefinition = "varchar(100)")
     private String name;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "manager_id")
-    private Employee employee;
+    @ManyToOne
+    @JoinColumn(name = "manager_id", referencedColumnName = "id")
+    private Employee manager_id;
 
     @CreationTimestamp
     private LocalDateTime created_at;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "created_by")
+    @ManyToOne
+    @JoinColumn(name = "created_by", referencedColumnName = "id")
     private Employee created_by;
 
     @CreationTimestamp
     private LocalDateTime updated_at;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "updated_by")
+    @ManyToOne
+    @JoinColumn(name = "updated_by", referencedColumnName = "id")
     private Employee updated_by;
 
-    @OneToMany(mappedBy = "department", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany
+    @JoinColumn(name = "employees", referencedColumnName = "id")
     private List<Employee> employees;
 
 }

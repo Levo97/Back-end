@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface DepartmentService {
 
-    void deleteDepartment(Long id);
+    void deleteDepartment(int id);
 
 
     List<Department> searchDepartment(String name);
