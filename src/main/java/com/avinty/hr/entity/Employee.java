@@ -7,6 +7,7 @@ import javax.persistence.*;
 
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -41,6 +42,7 @@ public class Employee {
     private String full_name;
 
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name = "department", referencedColumnName = "id")
     private Department department;
 
@@ -48,6 +50,7 @@ public class Employee {
     private LocalDateTime created_at;
 
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name = "created_by", referencedColumnName = "id")
     private Employee created_by;
 
@@ -55,6 +58,7 @@ public class Employee {
     private LocalDateTime updated_at;
 
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name = "updated_by", referencedColumnName = "id")
     private Employee updated_by;
 }

@@ -1,6 +1,7 @@
 package com.avinty.hr.entity;
 
 import com.fasterxml.jackson.annotation.JsonIdentityReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -10,6 +11,7 @@ import org.hibernate.annotations.DynamicInsert;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @DynamicInsert
 @Data
@@ -29,6 +31,7 @@ public class Department {
     private String name;
 
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name = "manager_id", referencedColumnName = "id")
     private Employee manager_id;
 
@@ -36,6 +39,7 @@ public class Department {
     private LocalDateTime created_at;
 
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name = "created_by", referencedColumnName = "id")
     private Employee created_by;
 
@@ -43,9 +47,15 @@ public class Department {
     private LocalDateTime updated_at;
 
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name = "updated_by", referencedColumnName = "id")
     private Employee updated_by;
 
 
-
+    @OneToMany(fetch = FetchType.LAZY, cascade = { CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.PERSIST }, mappedBy = "department")
+    private List<Employee> employees;
+    @PreRemove
+    public void deleteConnections(){
+        this.getEmployees().forEach(employee -> employee.setDepartment(null));
+    }
 }

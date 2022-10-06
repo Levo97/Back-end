@@ -15,7 +15,7 @@ public class DepartmentController {
     @Autowired
     private DepartmentService departmentService;
 
-    @DeleteMapping("/department/:{id}")
+    @DeleteMapping("/department/{id}")
     public HttpStatus deleteDepartment(@PathVariable Integer id){
         this.departmentService.deleteDepartment(id);
         return HttpStatus.OK;
