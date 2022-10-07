@@ -8,4 +8,14 @@
       http://www.liquibase.org/xml/ns/pro
       http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd">
     <includeAll path="db/changelog/changelog-v1.0.xml"/>
+
+    <!--<changeSet author="lkocsor" id="addColumn">
+        <addColumn tableName="employees" >
+            <column name="IS_ACTIVE"
+                    type="boolean" >
+                <constraints nullable="false" />
+            </column>
+        </addColumn>
+    </changeSet>-->
+
 </databaseChangeLog>
