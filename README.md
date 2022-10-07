@@ -42,6 +42,8 @@ Create the following skeleton project, using Spring initializer:
 Create the HR schema for the application. Where it’s needed create columns with NOT
 NULL.
 
+![image](https://user-images.githubusercontent.com/50501945/194535455-025ee646-7900-45f9-90c5-71dfb3a05c00.png)
+
 
 The API has to have for the following list:
 
