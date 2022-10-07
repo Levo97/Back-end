@@ -10,6 +10,7 @@ If you choose a private one, please send invitations for the following colleague
 - peter.szilagyi@avinty.com
 - adam.schlichter@avinty.com
 - gyozo.zsok@avinty.com
+
 Through working on the test, please register the time you spent on the tasks. Upload the
 report next to your solution.
 You have one week, started with sending this mail, to send us the link to the GIT repository
