@@ -1,26 +1,5 @@
 # Back-end developer test
 
-Please upload the solutions to a public or private GIT repository when you finish the test.
-If you choose a private one, please send invitations for the following colleagues of ours:
-
-- zoltan.gergo.cari@avinty.com
-- david.kun@avinty.com
-- balazs.fodor-pap@avinty.com
-- kevin.kovacs@avinty.com
-- peter.szilagyi@avinty.com
-- adam.schlichter@avinty.com
-- gyozo.zsok@avinty.com
-
-Through working on the test, please register the time you spent on the tasks. Upload the
-report next to your solution.
-You have one week, started with sending this mail, to send us the link to the GIT repository
-you used.
-Please do not forget to send the mail to all our colleagues on the list above! If you have
-any questions about the tasks, feel free to contact persons from the same list!
-
-Please use English through the work!
-
-
 Create the following skeleton project, using Spring initializer:
 
 - **Group:** com.avinty
