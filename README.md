@@ -1,4 +1,4 @@
-# Back-end developer test
+# Back-end task
 
 Create the following skeleton project, using Spring initializer:
 
