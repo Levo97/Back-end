@@ -2,7 +2,7 @@
 
 Create the following skeleton project, using Spring initializer:
 
-- **Group:** com.avinty
+- **Group:** com.___
 - **Artifact:** hr
 - **Name:** hr
 - **Packaging:** Jar
